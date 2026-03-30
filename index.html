@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>(TEORIMA) Tourist Booking - Pink V3</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div id="loginPage" class="login-box">
+<h2>Welcome Visitors 🌸</h2>
+
+<input type="text" id="username" placeholder="Username">
+<input type="password" id="password" placeholder="Password">
+<input type="text" id="phone" placeholder="Phone">
+<input type="email" id="email" placeholder="Email">
+<input type="text" id="address" placeholder="Address">
+
+<button onclick="login()">Start Journey</button>
+</div>
+
+<div id="mainPage">
+
+<div class="sidebar">
+<h3>Locations</h3>
+<button onclick="showSpots('davao')">Davao</button>
+<button onclick="showSpots('zamboanga')">Zamboanga</button>
+<button onclick="showSpots('cdo')">Cagayan de Oro</button>
+<button onclick="showSpots('bukidnon')">Bukidnon</button>
+<button onclick="showSpots('surigao')">Siargao</button>
+</div>
+
+<div class="content">
+
+<h1>Explore Mindanao 🌺</h1>
+
+<div id="spots" class="grid"></div>
+
+<div class="form-box">
+<h2>Booking Details</h2>
+
+<form id="bookingForm">
+
+<input type="text" id="name" placeholder="Full Name" required>
+<input type="number" id="age" placeholder="Age" required>
+<input type="text" id="userAddress" placeholder="Address" required>
+
+<input type="text" id="spot" placeholder="Selected Spot" readonly>
+
+<select id="room">
+<option>Standard Room</option>
+<option>Deluxe Room</option>
+<option>Family Room</option>
+</select>
+
+<select id="food">
+<option>Breakfast</option>
+<option>Lunch</option>
+<option>Dinner</option>
+<option>Full Package</option>
+</select>
+
+<input type="date" id="date" required>
+<input type="time" id="time" required>
+
+<input type="number" id="days" placeholder="Days" required>
+<input type="number" id="guests" placeholder="Guests" required>
+
+<input type="text" id="price" placeholder="Price" readonly>
+
+<button type="submit">Book Now</button>
+
+</form>
+</div>
+
+<div id="receipt" class="receipt-box"></div>
+
+<div class="table-box">
+<h2>Visitor Records</h2>
+
+<table id="bookingTable">
+<thead>
+<tr>
+<th>Name</th>
+<th>Place</th>
+<th>Room</th>
+<th>Food</th>
+<th>Date</th>
+<th>Time</th>
+</tr>
+</thead>
+<tbody></tbody>
+</table>
+</div>
+
+</div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
